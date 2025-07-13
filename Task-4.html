@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Website</title>
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+  <header>
+    <h1>Sushmitha's Super Web App 🌙</h1>
+    <nav>
+      <button onclick="showSection('portfolio')">Portfolio</button>
+      <button onclick="showSection('todo')">To-Do</button>
+      <button onclick="showSection('products')">Products</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="portfolio" class="section">
+      <h2>👨‍💻 Portfolio</h2>
+      <p>Hey there! I'm Sushmitha. Here's what I do:</p>
+      <ul>
+        <li>🌐 Web Dev</li>
+        <p>I create responsive, user-friendly websites using HTML, CSS, JavaScript, and frameworks like React. I love building clean UI and interactive features.</p>
+      </ul>
+    </section>
+
+    <section id="todo" class="section hidden">
+      <h2>📝 To-Do List</h2>
+      <input id="taskInput" type="text" placeholder="Add a task...">
+      <button onclick="addTask()">Add</button>
+      <ul id="taskList"></ul>
+    </section>
+
+    <section id="products" class="section hidden">
+      <h2>🛍️ Products</h2>
+      <label>Category:
+        <select id="categoryFilter" onchange="filterAndSort()">
+          <option value="all">All</option>
+          <option value="tech">Tech</option>
+          <option value="clothing">Clothing</option>
+        </select>
+      </label>
+      <label>Sort by Price:
+        <select id="priceSort" onchange="filterAndSort()">
+          <option value="low">Low to High</option>
+          <option value="high">High to Low</option>
+        </select>
+      </label>
+      <div id="productList"></div>
+    </section>
+  </main>
+
+  <script src="script4.js"></script>
+</body>
+</html>
